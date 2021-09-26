@@ -11,12 +11,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/purple_200"
-        android:text="@string/button_label_toast"
+        android:text="@string/button_label_hello"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="showToast"/>
+        android:onClick="sayHello"/>
 
     <Button
         android:id="@+id/button_count"
