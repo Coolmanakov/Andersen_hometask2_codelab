@@ -1,4 +1,4 @@
-package com.example.helloworld
+package com.example.helloworld.activity_intents
 
 import android.app.Activity
 import android.content.Context
@@ -11,8 +11,9 @@ import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.example.helloworld.R
 
-class MainActivity : AppCompatActivity() {
+class FirstActivity : AppCompatActivity() {
     private var mMessageEditText : EditText? = null
     private var mReplyHeadTextView : TextView? = null
     private var mReplyTextView : TextView? = null
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object{
-        private  val LOG_TAG = MainActivity.javaClass.canonicalName
+        private  val LOG_TAG = FirstActivity.javaClass.canonicalName
         val EXTRA_MESSAGE = "com.example.android.twoactivities.extra.MESSAGE"
         val TEXT_REQUEST = 1
     }
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d(LOG_TAG, "onCreate()")
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_first)
 
         mMessageEditText = findViewById(R.id.editText_main)
         mReplyHeadTextView = findViewById(R.id.text_header_reply);

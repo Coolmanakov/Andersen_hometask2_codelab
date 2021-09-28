@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Two Activities</string>
+    <string name="app_name_two_activities">Two Activities</string>
     <string name="title_activity_happy_birthday">HappyBirthday</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

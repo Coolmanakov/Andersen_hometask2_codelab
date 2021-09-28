@@ -1,4 +1,4 @@
-package com.example.helloworld
+package com.example.helloworld.activity_intents
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.helloworld.R
 
 class SecondActivity : AppCompatActivity() {
     private var textView : TextView? = null
@@ -24,7 +25,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
         mReply = findViewById(R.id.editText_second)
 
-        val message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE)
+        val message = intent.getStringExtra(FirstActivity.EXTRA_MESSAGE)
         textView = findViewById(R.id.text_message)
         textView?.apply {
             text = message

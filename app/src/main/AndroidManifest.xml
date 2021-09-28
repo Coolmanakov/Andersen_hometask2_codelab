@@ -5,21 +5,21 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_name_two_activities"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
-        <activity android:name=".CounterHomework"/>
+        <activity android:name=".activity_intents.CounterHomework"/>
         <activity
-            android:name=".SecondActivity"
+            android:name=".activity_intents.SecondActivity"
             android:label="Second Activity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity_intents.FirstActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.helloworld.MainActivity" />
+                android:value="com.example.helloworld.activity_intents.FirstActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity_intents.FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

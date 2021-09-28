@@ -1,8 +1,9 @@
-package com.example.helloworld
+package com.example.helloworld.activity_intents
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.helloworld.R
 
 class CounterHomework : AppCompatActivity() {
     private var mCount = 0;
