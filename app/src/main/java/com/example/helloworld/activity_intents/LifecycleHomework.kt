@@ -5,13 +5,13 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.helloworld.R
 
-class CounterHomework : AppCompatActivity() {
+class LifecycleHomework : AppCompatActivity() {
     private var mCount = 0;
     private var counter : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_counter_homework)
+        setContentView(R.layout.activity_lifecycle_homework)
 
         savedInstanceState.let {
             counter?.text = it?.getString("counter_val")

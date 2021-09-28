@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
-        <activity android:name=".activity_intents.CounterHomework"/>
+        <activity android:name=".activity_intents.LifecycleHomework"/>
         <activity
             android:name=".activity_intents.SecondActivity"
             android:label="Second Activity"
