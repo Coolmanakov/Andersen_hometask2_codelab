@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
     private var mMessageEditText : EditText? = null
@@ -29,15 +30,27 @@ class MainActivity : AppCompatActivity() {
         val EXTRA_MESSAGE = "com.example.android.twoactivities.extra.MESSAGE"
         val TEXT_REQUEST = 1
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(LOG_TAG, "onCreate()")
+
         setContentView(R.layout.activity_main)
 
         mMessageEditText = findViewById(R.id.editText_main)
         mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
 
-        Log.d(LOG_TAG, "Main Activity calling onCreate() ")
+        savedInstanceState?.let {
+            val isVisible = savedInstanceState.getBoolean("reply_visible")
+            if(isVisible){
+                mReplyHeadTextView?.visibility = View.VISIBLE
+                mReplyTextView?.text = savedInstanceState.getString("reply_text")
+                mReplyTextView?.visibility = View.VISIBLE
+            }
+        }
+
+
     }
 
     fun launchSecondActivity(view: View) {
@@ -59,5 +72,37 @@ class MainActivity : AppCompatActivity() {
             else -> intent?.getStringExtra(SecondActivity.EXTRA_REPLY)
         }
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        mReplyHeadTextView?.isVisible?.let {
+            outState.putBoolean("reply_visible", it)
+            outState.putString("reply_text", mReplyHeadTextView?.text.toString())}
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(LOG_TAG, "onStart()")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.d(LOG_TAG, "onStart()")
+    }
+    override fun onPause() {
+        super.onPause()
+        Log.d(LOG_TAG, "onPause()")
+    }
+    override fun onStop() {
+        super.onStop()
+        Log.d(LOG_TAG, "onStop()")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(LOG_TAG, "onDestroy()")
+    }
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(LOG_TAG, "onRestart()")
     }
 }
