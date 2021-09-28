@@ -9,15 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
-        <activity
-            android:name=".BirthdayActivity"
-            android:label="@string/title_activity_birthday"
-            android:theme="@style/Theme.HelloWorld.NoActionBar"></activity>
-        <activity
-            android:name=".HappyBirthday"
-            android:label="@string/title_activity_happy_birthday"
-            android:theme="@style/Theme.HelloWorld.NoActionBar" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".ScrollViewActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
