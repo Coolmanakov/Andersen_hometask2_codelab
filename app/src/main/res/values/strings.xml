@@ -12,9 +12,11 @@
     <string name="title_activity_birthday">BirthdayActivity</string>
 
     <string name="button_label_toast">Toast</string>
-    <string name="button_label_zero">ZERO</string>
+    <string name="button_label_hello">SAY HELLO</string>
     <string name="button_label_count">Count</string>
     <string name="count_initial_value">0</string>
     <string name="toast_message">Hello Toast!</string>
+    <string name="hello">Hello</string>
+    <string name="button_label_zero">ZERO</string>
 
 </resources>
