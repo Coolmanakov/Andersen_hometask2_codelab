@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import com.example.helloworld.R
-import com.example.helloworld.ReceiverActivity
 
 class BroadcastActivity : AppCompatActivity() {
     private var mCount = 0

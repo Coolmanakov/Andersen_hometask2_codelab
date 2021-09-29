@@ -1,10 +1,10 @@
-package com.example.helloworld
+package com.example.helloworld.hello_toast
 
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.helloworld.hello_toast.BroadcastActivity
+import com.example.helloworld.R
 
 class ReceiverActivity : AppCompatActivity() {
 
