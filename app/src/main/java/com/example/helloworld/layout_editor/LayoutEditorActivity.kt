@@ -1,4 +1,4 @@
-package com.example.helloworld.hello_toast
+package com.example.helloworld.layout_editor
 
 import android.os.Bundle
 import android.view.View
