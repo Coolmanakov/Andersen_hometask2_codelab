@@ -7,12 +7,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.helloworld.R
 
-class HelloToast : AppCompatActivity() {
+class LayoutEditorActivity : AppCompatActivity() {
     private var mCount = 0
     private var mShowCount : TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hello_toast)
+        setContentView(R.layout.activity_layout_editor)
 
         mShowCount = findViewById(R.id.show_count)
     }
