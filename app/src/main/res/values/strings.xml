@@ -18,5 +18,6 @@
     <string name="toast_message">Hello Toast!</string>
     <string name="hello">Hello</string>
     <string name="button_label_zero">ZERO</string>
+    <string name="app_name_helloWorld">Hello World</string>
 
 </resources>
