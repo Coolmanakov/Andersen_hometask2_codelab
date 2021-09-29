@@ -9,9 +9,9 @@ import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import com.example.helloworld.R
-import com.example.helloworld.SecondActivity
+import com.example.helloworld.ReceiverActivity
 
-class HelloToast : AppCompatActivity() {
+class BroadcastActivity : AppCompatActivity() {
     private var mCount = 0
     private var mShowCount : TextView? = null
 
@@ -24,7 +24,7 @@ class HelloToast : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hello_toast)
+        setContentView(R.layout.activity_broadcast)
 
         mShowCount = findViewById(R.id.show_count)
     }
@@ -48,13 +48,13 @@ class HelloToast : AppCompatActivity() {
 
     class SecondActivityContract : ActivityResultContract<CharSequence?, Int>(){
         override fun createIntent(context: Context, input: CharSequence?): Intent {
-            return Intent(context, SecondActivity::class.java)
+            return Intent(context, ReceiverActivity::class.java)
                 .putExtra(SEND_MESSAGE, input)
         }
 
         override fun parseResult(resultCode: Int, intent: Intent?): Int? = when{
             resultCode != Activity.RESULT_OK -> 0
-            else -> intent?.getIntExtra(SecondActivity.REPLY, 0)
+            else -> intent?.getIntExtra(ReceiverActivity.REPLY, 0)
 
         }
 
