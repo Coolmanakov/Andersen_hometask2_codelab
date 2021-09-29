@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class ThreeButtonActivity : AppCompatActivity() {
     private var mCount = 0
     private var mShowCount : TextView? = null
     private var buttonZero : Button? = null
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_three_button)
 
         mShowCount = findViewById(R.id.show_count)
         buttonZero = findViewById(R.id.button_zero)
