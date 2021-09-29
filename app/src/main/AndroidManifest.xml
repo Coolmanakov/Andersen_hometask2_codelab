@@ -30,6 +30,20 @@
         <activity android:name=".layout_editor.LayoutEditorActivity"
             android:exported="true">
         </activity>
+
+        <activity
+            android:name=".activity_intents.SecondActivity"
+            android:label="Second Activity"
+            android:parentActivityName=".activity_intents.FirstActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.helloworld.activity_intents.FirstActivity" />
+        </activity>
+        <activity
+            android:name=".activity_intents.FirstActivity"
+            android:exported="true">
+        </activity>
+    </application>
     </application>
 
 </manifest>
