@@ -43,6 +43,9 @@
             android:name=".activity_intents.FirstActivity"
             android:exported="true">
         </activity>
+
+        <activity android:name=".implicit_intents.ImplicitIntentActivity"/>
+        <activity android:name=".implicit_intents.ImplicitIntentReceiver"/>
     </application>
 
 </manifest>
