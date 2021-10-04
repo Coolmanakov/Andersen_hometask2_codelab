@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_intents.code_challenge.ButtonActivity">
+    <Button
+        android:id="@+id/first_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/text_one"
+        android:onClick="showPassage"
+        android:tooltipText="first_btn"
+        app:layout_constraintBottom_toTopOf="@+id/second_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/second_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/text_two"
+        android:onClick="showPassage"
+        android:tooltipText="second_btn"
+        app:layout_constraintBottom_toTopOf="@+id/third_btn"
+        app:layout_constraintEnd_toEndOf="@+id/first_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/first_btn"
+        app:layout_constraintTop_toBottomOf="@+id/first_btn" />
+
+    <Button
+        android:id="@+id/third_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/text_three"
+        android:onClick="showPassage"
+        android:tooltipText="third_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/second_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/second_btn"
+        app:layout_constraintTop_toBottomOf="@+id/second_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

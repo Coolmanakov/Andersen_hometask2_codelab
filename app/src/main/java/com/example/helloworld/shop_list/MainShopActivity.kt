@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContract
+import androidx.core.view.isVisible
 import com.example.helloworld.R
 import com.example.helloworld.activity_intents.SecondActivity
 import java.util.ArrayList
@@ -26,6 +27,8 @@ class MainShopActivity : AppCompatActivity() {
     private var item10 : TextView? = null
     private lateinit var listTextViews : List<TextView?>
 
+    private var shopListSaved = ArrayList<String>()
+
     private var addItem : Button? = null
 
     companion object{
@@ -35,12 +38,14 @@ class MainShopActivity : AppCompatActivity() {
 
     val launcher = registerForActivityResult(ShopActivityCiContract()){
         findNonEmptyTextView(it)
+        shopListSaved.add(it)
     }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_shop)
+
 
         item1 = findViewById(R.id.item1)
         item2 = findViewById(R.id.item2)
@@ -55,6 +60,15 @@ class MainShopActivity : AppCompatActivity() {
         addItem = findViewById(R.id.add_item)
 
         listTextViews = listOf(item1, item2, item3, item4, item5,item6, item7, item8, item9, item10)
+
+        savedInstanceState?.let {
+            shopListSaved = it.getStringArrayList("string array") as ArrayList<String>
+            var pos = 0
+            shopListSaved.forEach{
+                listTextViews[pos]?.text = it
+                pos++
+            }
+        }
     }
 
     fun chooseItem(view: android.view.View) {
@@ -83,5 +97,11 @@ class MainShopActivity : AppCompatActivity() {
                 return
             }
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putStringArrayList("string array", shopListSaved)
     }
 }
