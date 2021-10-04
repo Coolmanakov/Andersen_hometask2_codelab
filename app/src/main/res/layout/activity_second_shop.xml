@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shop_list.SecondShopActivity">
+
+    <Button
+        android:id="@+id/cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/cheese"
+        android:onClick="replyItem"
+        android:tooltipText="@string/cheese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/rice"
+        android:onClick="replyItem"
+        android:tooltipText="@string/rice"
+        app:layout_constraintStart_toStartOf="@+id/cheese"
+        app:layout_constraintTop_toBottomOf="@+id/cheese" />
+
+    <Button
+        android:id="@+id/apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/apple"
+        android:onClick="replyItem"
+        android:tooltipText="@string/apple"
+        app:layout_constraintStart_toStartOf="@+id/rice"
+        app:layout_constraintTop_toBottomOf="@+id/rice" />
+
+    <Button
+        android:id="@+id/sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="replyItem"
+        android:text="@string/sugar"
+        android:tooltipText="@string/sugar"
+        app:layout_constraintStart_toStartOf="@+id/apple"
+        app:layout_constraintTop_toBottomOf="@+id/apple" />
+
+    <Button
+        android:id="@+id/chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/chips"
+        android:onClick="replyItem"
+        android:tooltipText="@string/chips"
+        app:layout_constraintStart_toStartOf="@+id/sugar"
+        app:layout_constraintTop_toBottomOf="@+id/sugar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

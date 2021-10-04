@@ -9,43 +9,70 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
-        <activity android:name=".ThreeButtonActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".ThreeButtonActivity"
+            android:exported="true" />
 
-        <activity android:name=".hello_toast.BroadcastActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".hello_toast.ReceiverActivity"/>
+        <activity
+            android:name=".hello_toast.BroadcastActivity"
+            android:exported="true" />
+        <activity android:name=".hello_toast.ReceiverActivity" />
 
-        <activity android:name=".HelloWorldActivity"
-            android:exported="true">
-        </activity>
-
-        <activity android:name=".layout_editor.LayoutEditorActivity"
-            android:exported="true">
-        </activity>
+        <activity
+            android:name=".HelloWorldActivity"
+            android:exported="true" />
+        <activity
+            android:name=".layout_editor.LayoutEditorActivity"
+            android:exported="true" />
 
         <activity
             android:name=".activity_intents.SecondActivity"
+            android:exported="true"
             android:label="Second Activity"
             android:parentActivityName=".activity_intents.FirstActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.helloworld.activity_intents.FirstActivity" />
         </activity>
+
         <activity
             android:name=".activity_intents.FirstActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".implicit_intents.ImplicitIntentActivity"
+            android:exported="true" />
+        <activity android:name=".implicit_intents.ImplicitIntentReceiver" />
+
+        <activity
+            android:name=".scroll_view.ScrollViewActivity"
             android:exported="true">
         </activity>
 
-        <activity android:name=".implicit_intents.ImplicitIntentActivity"/>
-        <activity android:name=".implicit_intents.ImplicitIntentReceiver"/>
+        <activity
+            android:name=".shop_list.SecondShopActivity"
+            android:exported="true"
+            android:parentActivityName=".shop_list.MainShopActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.helloworld.shop_list.MainShopActivity" />
+
+
+        </activity>
+
+        <activity android:name=".shop_list.MainShopActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
     </application>
 
 </manifest>

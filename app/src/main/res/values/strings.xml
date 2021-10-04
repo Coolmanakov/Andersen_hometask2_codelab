@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name_two_activities">Two Activities</string>
+    <string name="app_name">Two Activities</string>
     <string name="title_activity_happy_birthday">HappyBirthday</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -53,4 +53,23 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="text_header_reply">Reply Received</string>
     <string name="count">COUNT</string>
     <string name="edit_text">This is an edit text</string>
+
+    <string name="edittext_uri">http://developer.android.com</string>
+    <string name="button_uri">Open Website</string>
+
+    <string name="edittext_loc">Golden Gate Bridge</string>
+    <string name="button_loc">Open Location</string>
+
+    <string name="edittext_share">\'Twas brillig and the slithy toves</string>
+    <string name="button_share">Share This Text</string>
+
+
+    <string name="uri_label">URI:</string>
+    <string name="take_a_picture">Take a picture</string>
+    <string name="add_item">Add Item</string>
+    <string name="cheese">Cheese</string>
+    <string name="rice">Rice</string>
+    <string name="apple">Apple</string>
+    <string name="sugar">Sugar</string>
+    <string name="chips">Chips</string>
 </resources>
